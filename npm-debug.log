@@ -7,8 +7,8 @@
 6 silly lifecycle ntask-api@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle ntask-api@1.0.0~start: ntask-api@1.0.0
 8 verbose lifecycle ntask-api@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle ntask-api@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/test/Desktop/ntask-api/node_modules/.bin:/Users/test/.rvm/gems/ruby-2.0.0-p648/bin:/Users/test/.rvm/gems/ruby-2.0.0-p648@global/bin:/Users/test/.rvm/rubies/ruby-2.0.0-p648/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin/mysql:b0VIM 7.3:/usr/local/mysql/bin/mysql:/Users/test/.rvm/bin
-10 verbose lifecycle ntask-api@1.0.0~start: CWD: /Users/test/Desktop/ntask-api
+9 verbose lifecycle ntask-api@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/test/Desktop/ntaskApi/ntask-api/node_modules/.bin:/Users/test/.rvm/gems/ruby-2.0.0-p648/bin:/Users/test/.rvm/gems/ruby-2.0.0-p648@global/bin:/Users/test/.rvm/rubies/ruby-2.0.0-p648/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin/mysql:b0VIM 7.3:/usr/local/mysql/bin/mysql:/Users/test/.rvm/bin
+10 verbose lifecycle ntask-api@1.0.0~start: CWD: /Users/test/Desktop/ntaskApi/ntask-api
 11 silly lifecycle ntask-api@1.0.0~start: Args: [ '-c', 'babel-node index.js' ]
 12 silly lifecycle ntask-api@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle ntask-api@1.0.0~start: Failed to exec start script
@@ -23,7 +23,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:891:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid ntask-api@1.0.0
-16 verbose cwd /Users/test/Desktop/ntask-api
+16 verbose cwd /Users/test/Desktop/ntaskApi/ntask-api
 17 error Darwin 16.6.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.11.0
