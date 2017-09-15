@@ -1,0 +1,22 @@
+{
+  "name": "ntask-api",
+  "version": "1.0.0",
+  "description": "A pilot project for API learnning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.2",
+    "express": "^4.13.4",
+    "sequelize": "^4.8.4",
+    "sqlite3": "^3.1.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
