@@ -4,20 +4,29 @@
   "description": "A pilot project for API learnning",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test mocha test/**/*.js",
     "start": "babel-node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.15.0",
     "consign": "^0.1.2",
     "express": "^4.13.4",
+    "jwt-simple": "^0.5.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^4.8.4",
     "sqlite3": "^3.1.11"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "supertest": "^3.0.0"
   }
 }

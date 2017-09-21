@@ -1,19 +1,21 @@
 /**
  * Created by M.C on 2017/9/19.
  */
-import passport from "passport"
-import {Strategy, ExtractJwt} from "passport-jwt"
+import passport from "passport";
+import {Strategy, ExtractJwt} from "passport-jwt";
 
 module.exports = app => {
-    "use strict";
     const Users = app.db.models.Users;
-    const ctf = app.libs.config;
+    const cfg = app.libs.config;
     const params = {
-        secretOrKey: ctf.jwtSecret,
+        secretOrKey: cfg.jwtSecret,
         jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
     };
+    var opts = {};
+    opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("JWT");
+    opts.secretOrKey = cfg.jwtSecret;
 
-    const strategy = new Strategy(params, (payload, done) => {
+    const strategy = new Strategy(opts, (payload, done) => {
         Users.findById(payload.id)
             .then(user => {
                 if (user) {
@@ -26,16 +28,14 @@ module.exports = app => {
             })
             .catch(error => done(error, null));
     });
-
     passport.use(strategy);
 
-    console.log(`passport:  ${passport.initialize()}`);
     return {
         initialize: () => {
             return passport.initialize();
         },
         authenticate: () => {
-            return passport.authenticate("jwt", ctf.jwtSession);
+            return passport.authenticate("jwt", cfg.jwtSession);
         }
     };
 };
