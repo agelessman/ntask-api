@@ -2,6 +2,7 @@
  * Created by M.C on 2017/9/15.
  */
 import bodyParser from "body-parser"
+import express from "express"
 
 module.exports = app => {
     "use strict";
@@ -18,4 +19,6 @@ module.exports = app => {
         }
         next();
     });
+
+    app.use(express.static("public"));
 };
