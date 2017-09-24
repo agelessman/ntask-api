@@ -1,0 +1,45 @@
+{"level":"info","message":"Sun Sep 24 2017 16:06:20 GMT+0800 (CST) Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, UNIQUE (`email`));","timestamp":"2017-09-24T08:06:20.105Z"}
+{"level":"info","message":"Sun Sep 24 2017 16:06:20 GMT+0800 (CST) Executing (default): PRAGMA INDEX_LIST(`Users`)","timestamp":"2017-09-24T08:06:20.113Z"}
+{"level":"info","message":"Sun Sep 24 2017 16:06:20 GMT+0800 (CST) Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","timestamp":"2017-09-24T08:06:20.115Z"}
+{"level":"info","message":"Sun Sep 24 2017 16:06:20 GMT+0800 (CST) Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","timestamp":"2017-09-24T08:06:20.117Z"}
+{"level":"info","message":"Sun Sep 24 2017 16:06:20 GMT+0800 (CST) Executing (default): PRAGMA INDEX_LIST(`Tasks`)","timestamp":"2017-09-24T08:06:20.118Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:06:41 +0000] \"GET / HTTP/1.1\" 200 29\n","timestamp":"2017-09-24T08:06:41.421Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:18:51 +0000] \"GET / HTTP/1.1\" 304 -\n","timestamp":"2017-09-24T08:18:51.108Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/ HTTP/1.1\" 200 27577\n","timestamp":"2017-09-24T08:19:12.945Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/vendor/prettify.css HTTP/1.1\" 200 1956\n","timestamp":"2017-09-24T08:19:12.962Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/css/style.css HTTP/1.1\" 200 10418\n","timestamp":"2017-09-24T08:19:12.963Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/vendor/polyfill.js HTTP/1.1\" 200 2900\n","timestamp":"2017-09-24T08:19:12.964Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/vendor/require.min.js HTTP/1.1\" 200 15825\n","timestamp":"2017-09-24T08:19:12.966Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/vendor/bootstrap.min.css HTTP/1.1\" 200 121200\n","timestamp":"2017-09-24T08:19:12.967Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:12 +0000] \"GET /apidoc/main.js HTTP/1.1\" 200 28722\n","timestamp":"2017-09-24T08:19:12.993Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/lodash.custom.min.js?v=1506241152996 HTTP/1.1\" 200 19579\n","timestamp":"2017-09-24T08:19:13.017Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/locale.js?v=1506241152996 HTTP/1.1\" 200 1226\n","timestamp":"2017-09-24T08:19:13.018Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/api_project.js?v=1506241152996 HTTP/1.1\" 200 392\n","timestamp":"2017-09-24T08:19:13.019Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/api_data.js?v=1506241152996 HTTP/1.1\" 200 19866\n","timestamp":"2017-09-24T08:19:13.019Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/utils/send_sample_request.js?v=1506241152996 HTTP/1.1\" 200 6328\n","timestamp":"2017-09-24T08:19:13.020Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/jquery.min.js?v=1506241152996 HTTP/1.1\" 200 85630\n","timestamp":"2017-09-24T08:19:13.022Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/semver.min.js?v=1506241152996 HTTP/1.1\" 200 12950\n","timestamp":"2017-09-24T08:19:13.023Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/webfontloader.js?v=1506241152996 HTTP/1.1\" 200 12492\n","timestamp":"2017-09-24T08:19:13.039Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/path-to-regexp/index.js?v=1506241152996 HTTP/1.1\" 200 5147\n","timestamp":"2017-09-24T08:19:13.043Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/list.min.js?v=1506241152996 HTTP/1.1\" 200 15952\n","timestamp":"2017-09-24T08:19:13.044Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/prettify/prettify.js?v=1506241152996 HTTP/1.1\" 200 15261\n","timestamp":"2017-09-24T08:19:13.046Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/ca.js?v=1506241152996 HTTP/1.1\" 200 1225\n","timestamp":"2017-09-24T08:19:13.047Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/handlebars.min.js?v=1506241152996 HTTP/1.1\" 200 72614\n","timestamp":"2017-09-24T08:19:13.048Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/de.js?v=1506241152996 HTTP/1.1\" 200 1234\n","timestamp":"2017-09-24T08:19:13.050Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/es.js?v=1506241152996 HTTP/1.1\" 200 1244\n","timestamp":"2017-09-24T08:19:13.056Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/fr.js?v=1506241152996 HTTP/1.1\" 200 1264\n","timestamp":"2017-09-24T08:19:13.062Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/it.js?v=1506241152996 HTTP/1.1\" 200 1249\n","timestamp":"2017-09-24T08:19:13.063Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/nl.js?v=1506241152996 HTTP/1.1\" 200 1241\n","timestamp":"2017-09-24T08:19:13.063Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/pl.js?v=1506241152996 HTTP/1.1\" 200 1226\n","timestamp":"2017-09-24T08:19:13.065Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/pt_br.js?v=1506241152996 HTTP/1.1\" 200 1236\n","timestamp":"2017-09-24T08:19:13.066Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/ro.js?v=1506241152996 HTTP/1.1\" 200 1238\n","timestamp":"2017-09-24T08:19:13.068Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/ru.js?v=1506241152996 HTTP/1.1\" 200 1481\n","timestamp":"2017-09-24T08:19:13.076Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/tr.js?v=1506241152996 HTTP/1.1\" 200 1246\n","timestamp":"2017-09-24T08:19:13.077Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/vi.js?v=1506241152996 HTTP/1.1\" 200 1328\n","timestamp":"2017-09-24T08:19:13.080Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/zh.js?v=1506241152996 HTTP/1.1\" 200 1163\n","timestamp":"2017-09-24T08:19:13.081Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/locales/zh_cn.js?v=1506241152996 HTTP/1.1\" 200 1186\n","timestamp":"2017-09-24T08:19:13.082Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/bootstrap.min.js?v=1506241152996 HTTP/1.1\" 200 37045\n","timestamp":"2017-09-24T08:19:13.084Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/utils/handlebars_helper.js?v=1506241152996 HTTP/1.1\" 200 10277\n","timestamp":"2017-09-24T08:19:13.123Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:19:13 +0000] \"GET /apidoc/vendor/diff_match_patch.min.js?v=1506241152996 HTTP/1.1\" 200 19192\n","timestamp":"2017-09-24T08:19:13.140Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:21:04 +0000] \"GET / HTTP/1.1\" 304 -\n","timestamp":"2017-09-24T08:21:04.968Z"}
+{"level":"info","message":"::1 - - [24/Sep/2017:08:21:45 +0000] \"GET /tasks/1 HTTP/1.1\" 401 -\n","timestamp":"2017-09-24T08:21:45.007Z"}

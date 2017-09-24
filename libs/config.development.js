@@ -1,6 +1,7 @@
 /**
  * Created by M.C on 2017/9/15.
  */
+import logger from "./logger.js"
 
 module.exports = {
     database: "ntask",
@@ -9,6 +10,10 @@ module.exports = {
     params: {
         dialect: "sqlite",
         storage: "ntask.sqlite",
+        logging: (sql) => {
+            "use strict";
+            logger.info(`${new Date()} ${sql}`);
+        },
         define: {
             underscored: true
         }

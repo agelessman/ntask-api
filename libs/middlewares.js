@@ -3,6 +3,10 @@
  */
 import bodyParser from "body-parser"
 import express from "express"
+import cors from "cors"
+import morgan from "morgan"
+import logger from "./logger"
+
 
 module.exports = app => {
     "use strict";
@@ -10,8 +14,19 @@ module.exports = app => {
     app.set("json spaces", 4);
     console.log(`err  ${JSON.stringify(app.auth)}`);
     app.use(bodyParser.json());
-    // app.use(app.auth.initialize());
-    console.log(`initialize: ${app.auth.initialize()}`);
+    app.use(app.auth.initialize());
+    app.use(morgan("common", {
+        stream: {
+            write: (message) => {
+                logger.info(message);
+            }
+        }
+    }));
+    app.use(cors({
+        origin: ["http://localhost:3001"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        allowedHeaders: ["Content-Type", "Authorization"]
+    }));
     app.use((req, res, next) => {
         // console.log(`header: ${JSON.stringify(req.headers)}`);
         if (req.body && req.body.id) {
