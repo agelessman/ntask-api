@@ -6,7 +6,8 @@ import express from "express"
 import cors from "cors"
 import morgan from "morgan"
 import logger from "./logger"
-
+import compression from "compression"
+import helmet from "helmet"
 
 module.exports = app => {
     "use strict";
@@ -15,6 +16,8 @@ module.exports = app => {
     console.log(`err  ${JSON.stringify(app.auth)}`);
     app.use(bodyParser.json());
     app.use(app.auth.initialize());
+    app.use(compression());
+    app.use(helmet());
     app.use(morgan("common", {
         stream: {
             write: (message) => {
